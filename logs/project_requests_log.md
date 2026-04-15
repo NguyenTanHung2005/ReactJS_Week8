@@ -180,3 +180,15 @@ Purpose: Luu lai cac yeu cau cua user trong qua trinh phat trien project.
 - Validation:
   - Lint: PASS.
   - Build: PASS.
+
+## 2026-04-15 (Site Map Page + Rerun Plan1-7)
+- Yeu cau: "tao 1 trang sitemap va chay lai Plan1-7"
+- Huong xu ly:
+  - Tao trang Site Map trong app (`/sitemap`) de hien thi route tree public/protected/admin.
+  - Noi route vao AppRoutes va them link Site map trong footer.
+  - Rerun Plan1-Plan7 qua cac buoc: artifact check, diagnostics, lint, build.
+- Validation:
+  - Artifact Plan1-Plan7: PASS (FOUND day du).
+  - Diagnostics: PASS.
+  - Lint: PASS.
+  - Build: PASS.
