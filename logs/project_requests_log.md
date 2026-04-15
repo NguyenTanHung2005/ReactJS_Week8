@@ -192,3 +192,14 @@ Purpose: Luu lai cac yeu cau cua user trong qua trinh phat trien project.
   - Diagnostics: PASS.
   - Lint: PASS.
   - Build: PASS.
+
+## 2026-04-15 (Repository README for Agent Prompt Workflow)
+- Yeu cau: "tao 1 file README ... de gioi thieu cach prompt Agent va logs prompt cung voi project"
+- Huong xu ly:
+  - Tao file `README.md` tai root repo de mo ta:
+    * Tong quan project
+    * Quy trinh prompt Agent theo Plan
+    * Cau truc prompt/Plan
+    * Chi muc logs va lich su yeu cau
+    * Huong dan chay local
+  - Them repository link: https://github.com/NguyenTanHung2005/ReactJS_Week8
