@@ -1,75 +1,76 @@
-# ReactJS Week8 - Agent Prompt Workflow
+# ReactJS Week8 - Quy Trinh Prompt Agent
 
 Repository: https://github.com/NguyenTanHung2005/ReactJS_Week8
 
-## 1) Project Overview
-This project is a React + Vite application for a Mini Food Ordering System.
-It includes:
-- Auth and role-based routing (USER or ADMIN)
-- Food listing/detail/form flows
-- Cart, checkout, orders, notifications
-- Admin dashboard and management pages
-- Site map page and SEO sitemap files
+## 1) Tong Quan Du An
+Du an nay duoc xay dung bang React + Vite, mo phong he thong Mini Food Ordering System.
 
-Main app source:
+Chuc nang chinh bao gom:
+- Dang nhap va phan quyen theo vai tro USER hoac ADMIN
+- Quan ly mon an (danh sach, chi tiet, tao moi, chinh sua)
+- Gio hang, thanh toan, don hang, thong bao
+- Khu vuc quan tri (dashboard, quan ly user, quan ly food)
+- Trang Site Map trong app va bo sitemap cho SEO
+
+Thu muc code chinh:
 - ReactJS_week8/
 
-## 2) How I Prompt My Agent
-This repository uses a Plan-based workflow to manage requests and implementation progress.
+## 2) Cach Prompt Agent Trong Repo Nay
+Repo su dung quy trinh lam viec theo Plan de quan ly yeu cau va tien do.
 
-Workflow:
-1. Define request as a new plan goal (Plan2, Plan3, ...)
-2. Create or update plan docs in prompt/PlanN/
-3. Implement code changes in ReactJS_week8/
-4. Validate with lint and build
-5. Save request history and run results in logs/
+Quy trinh tong quat:
+1. Xac dinh yeu cau va dat vao mot Plan (Plan2, Plan3, ...)
+2. Tao hoac cap nhat tai lieu trong prompt/PlanN/
+3. Trien khai code trong ReactJS_week8/
+4. Kiem tra chat luong bang lint va build
+5. Luu lich su xu ly va ket qua chay vao logs/
 
-Common prompt patterns:
-- "Tạo PlanN với các yêu cầu..."
-- "Chạy PlanN"
-- "Cập nhật theo ảnh tham chiếu"
-- "Chạy lại Plan1-7 và lưu log"
+Mau prompt thuong dung:
+- "Tao PlanN voi cac yeu cau..."
+- "Chay PlanN"
+- "Cap nhat theo anh tham chieu"
+- "Chay lai Plan1-7 va luu log"
 
-## 3) Prompt and Plan Structure
-All prompt plans are stored in:
+## 3) Cau Truc Prompt Va Plan
+Tat ca plan duoc quan ly trong:
 - prompt/
 
-Important files:
-- prompt/plan_priorities.md: priority and execution order for all plans
-- prompt/Plan2/md/prompts.md ... prompt/Plan7/md/prompts.md: prompt definitions per plan
-- prompt/PlanN/md/*.md: plan specs, reports, update requirements
-- prompt/PlanN/service/system_constraints.md: technical constraints per plan
+Cac file quan trong:
+- prompt/plan_priorities.md: thu tu uu tien va quy tac doc plan
+- prompt/Plan2/md/prompts.md ... prompt/Plan7/md/prompts.md: dinh nghia prompt tung plan
+- prompt/PlanN/md/*.md: dac ta, bao cao test, yeu cau cap nhat
+- prompt/PlanN/service/system_constraints.md: rang buoc ky thuat cua tung plan
 
-## 4) Logs and Prompt History
-Execution history is tracked in:
-- logs/project_requests_log.md: chronological master log for all requests
-- logs/plan5_reader_log.md: reader-focused Plan5 run summary
-- logs/plan2_to_plan7_rerun_log.md: rerun summary for Plan2-7
-- logs/plan1_to_plan7_rerun_log.md: rerun summary for Plan1-7
-- logs/site_map.md: human-readable route map
-- logs/admin_dashboard_reader_log.md: admin dashboard update summary
+## 4) He Thong Logs Va Lich Su Prompt
+Lich su trien khai duoc luu tai:
+- logs/project_requests_log.md: log tong theo thu tu thoi gian
+- logs/plan5_reader_log.md: tong hop de doc nhanh cho Plan5
+- logs/plan2_to_plan7_rerun_log.md: ket qua chay lai Plan2-7
+- logs/plan1_to_plan7_rerun_log.md: ket qua chay lai Plan1-7
+- logs/site_map.md: so do route de doc cho dev
+- logs/admin_dashboard_reader_log.md: tong hop cap nhat dashboard admin
 
-## 5) Site Map Artifacts
-- In-app Site Map page: /sitemap
-- SEO sitemap XML: ReactJS_week8/public/sitemap.xml
+## 5) Site Map Cua Du An
+- Trang Site Map trong app: /sitemap
+- Sitemap XML cho crawler: ReactJS_week8/public/sitemap.xml
 - Robots file: ReactJS_week8/public/robots.txt
 
-## 6) Run Project Locally
-From ReactJS_week8/ directory:
+## 6) Huong Dan Chay Du An Local
+Di chuyen vao thu muc ReactJS_week8/ va chay:
 
-- Install dependencies:
+- Cai dependencies:
   npm install
 
-- Start dev server:
+- Chay dev server:
   npm run dev
 
-- Lint:
+- Kiem tra lint:
   npm run lint
 
-- Build:
+- Build production:
   npm run build
 
-## 7) Notes for Reviewers
-- This repo is designed to show both implementation and prompt-driven development process.
-- Read logs/project_requests_log.md first to understand chronology.
-- Then read prompt/plan_priorities.md and each plan under prompt/PlanN/.
+## 7) Ghi Chu Cho Nguoi Review
+- Repo nay vua the hien ket qua code, vua the hien quy trinh phat trien bang prompt Agent.
+- Nen doc logs/project_requests_log.md truoc de nam duoc toan bo timeline thay doi.
+- Sau do doc prompt/plan_priorities.md va cac plan trong prompt/PlanN/ de hieu cach ra quyet dinh.
