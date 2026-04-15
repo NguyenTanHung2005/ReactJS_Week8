@@ -14,6 +14,7 @@ Framework đề xuất: React + React Router v6. Router: BrowserRouter. State: C
 - /foods/:id/edit        — Edit food (ADMIN only)
 - /cart                  — Cart (USER)
 - /checkout              — Checkout / Payment (USER)
+- /profile               — User profile information (USER)
 - /orders                — Order history (USER)
 - /orders/:id            — Order detail (USER or ADMIN per role)
 - /admin                 — Admin dashboard (ADMIN)
@@ -46,6 +47,8 @@ Framework đề xuất: React + React Router v6. Router: BrowserRouter. State: C
   - Orders/
     - OrdersPage
     - OrderDetailPage
+  - Users/
+    - UserProfilePage
   - Admin/
     - AdminDashboard
     - UserManagementPage
@@ -85,6 +88,7 @@ function AppRoutes() {
 
         <Route path="cart" element={<ProtectedRoute><CartPage/></ProtectedRoute>} />
         <Route path="checkout" element={<ProtectedRoute><CheckoutPage/></ProtectedRoute>} />
+        <Route path="profile" element={<ProtectedRoute><UserProfilePage/></ProtectedRoute>} />
         <Route path="orders" element={<ProtectedRoute><OrdersPage/></ProtectedRoute>} />
         <Route path="orders/:id" element={<ProtectedRoute><OrderDetailPage/></ProtectedRoute>} />
 

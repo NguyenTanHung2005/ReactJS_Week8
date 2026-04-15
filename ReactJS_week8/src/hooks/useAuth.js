@@ -1,18 +1,21 @@
-import { useState, useEffect, createContext, useContext } from 'react'
+import { useState, createContext, useContext, createElement } from 'react'
 
 const AuthContext = createContext(null)
 
-export function AuthProvider({ children }){
-  const [token, setToken] = useState(null)
-  const [user, setUser] = useState(null)
+function readStoredUser() {
+  const storedUser = sessionStorage.getItem('user')
+  if (!storedUser) return null
 
-  useEffect(() => {
-    // load from sessionStorage for demo
-    const t = sessionStorage.getItem('token')
-    const u = sessionStorage.getItem('user')
-    if(t) setToken(t)
-    if(u) setUser(JSON.parse(u))
-  }, [])
+  try {
+    return JSON.parse(storedUser)
+  } catch {
+    return null
+  }
+}
+
+export function AuthProvider({ children }){
+  const [token, setToken] = useState(() => sessionStorage.getItem('token'))
+  const [user, setUser] = useState(readStoredUser)
 
   function login(t, u){
     setToken(t)
@@ -27,7 +30,11 @@ export function AuthProvider({ children }){
     sessionStorage.removeItem('user')
   }
 
-  return <AuthContext.Provider value={{ token, user, login, logout }}>{children}</AuthContext.Provider>
+  return createElement(
+    AuthContext.Provider,
+    { value: { token, user, login, logout } },
+    children,
+  )
 }
 
 export function useAuth(){

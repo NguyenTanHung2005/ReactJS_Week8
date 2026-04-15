@@ -35,6 +35,7 @@
   - POST /api/auth/register
   - POST /api/auth/login
   - GET /api/users (admin)
+  - GET /api/users/me (profile info for logged-in user)
 - Orders:
   - POST /api/orders
   - GET /api/orders
